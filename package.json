@@ -1,0 +1,74 @@
+{
+  "name": "react-color",
+  "version": "1.0.6",
+  "description": "A Collection of Color Pickers from Sketch, Photoshop, Chrome & more",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "gulp prod",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casesandberg/react-color.git"
+  },
+  "author": {
+    "name": "case",
+    "email": "case@casesandberg.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/casesandberg/react-color/issues"
+  },
+  "homepage": "http://casesandberg.github.io/react-color/",
+  "keywords": [
+    "react",
+    "color picker",
+    "react-component",
+    "colorpicker",
+    "picker",
+    "sketch",
+    "chrome",
+    "photoshop",
+    "material design",
+    "popup"
+  ],
+  "dependencies": {
+    "install": "^0.1.8",
+    "lodash.debounce": "^3.1.1",
+    "lodash.isplainobject": "^3.2.0",
+    "lodash.throttle": "^3.0.4",
+    "material-colors": "^1.0.0",
+    "merge": "^1.2.0",
+    "npm": "^2.13.4",
+    "react": "^0.13.3",
+    "reactcss": "^0.3.2",
+    "tinycolor2": "^1.1.2"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babel-core": "^5.8.22",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.15.6",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-modify": "^0.1.1",
+    "gulp-util": "^3.0.6",
+    "highlight.js": "^8.7.0",
+    "html-loader": "^0.3.0",
+    "jsx-loader": "^0.13.2",
+    "normalize.css": "^3.0.3",
+    "react-context": "0.0.1",
+    "react-hot-loader": "^1.2.8",
+    "react-map-styles": "^0.2.0",
+    "remarkable": "^1.6.0",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "readme": "# [React Color](http://casesandberg.github.io/react-color/)\n\n* **7 Different Pickers** - Sketch, Photoshop, Chrome and many more\n\n* **Popup or Block** - It can be used it as a popup or always visible\n\n* **Make Your Own** - Use the building block components to make your own\n\n![Sketch and Photoshop Color Picker Built in React](http://casesandberg.github.io/react-color/screenshot.png)\n\n## Installation & Usage\n\n```\nnpm install react-color --save\n```\n\n### Include the Component\n\n```\nvar React = require('react');\nvar ColorPicker = require('react-color');\n\nclass Component extends React.Component {\n\n  render() {\n    return <ColorPicker type=\"sketch\" />;\n  }\n}\n```\n\n### Display It\nDisplay the color picker popup on click, or don't define display and it will always be visible.\n\n```\nvar React = require('react');\nvar ColorPicker = require('react-color');\n\nclass Component extends React.Component {\n\n  constructor() {\n    super();\n    this.state = {\n      displayColorPicker: false,\n    };\n    this.handleClick = this.handleClick.bind(this);\n  }\n\n  handleClick() {\n    this.setState({ displayColorPicker: !this.state.displayColorPicker });\n  }\n\n  render() {\n    return (\n      <div>\n        <button onClick={ this.handleClick }>Pick Color</button>\n        <ColorPicker display={ this.state.displayColorPicker } type=\"sketch\" />\n      </div>\n    );\n  }\n}\n```\n\n> 100% inline styles via [ReactCSS](http://reactcss.com/)\n",
+  "readmeFilename": "README.md",
+  "_id": "react-color@1.0.6",
+  "_shasum": "02f46ca69667c9e55e1aaae0aa95b8d21ffe16fd",
+  "_resolved": "git://github.com/knapeto/react-color.git#ccae02f6406d826cc0215c20b64027cad371a958",
+  "_from": "react-color@git://github.com/knapeto/react-color.git"
+}
